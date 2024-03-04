@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Noto Sans KR, Malgun Gothic, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #323232;
+    text-align: left;
+}
+
+.header{
+    height: 4.5rem;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.header-nav{
+    height: 4.5rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-nav-section-div{
+    width: 60.625rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.left-section{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    margin-right: 1.875rem;
+}
+
+.left-nav-list{
+    display: flex;
+
+}
+
+.left-nav-list-item:first-child{
+    margin-left: 0;
+}
+
+.left-nav-list-item{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.125rem;
+    font-weight: 500;
+    
+}
+
+.center-form-div{
+    border: none;
+    height: 2.5rem;
+    width: 17.5rem;
+    margin: 0;
+    border-radius: 6px;
+    padding: 0 0.75rem;
+    background: #f4f4f4;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.center-form-input{
+    border: none;
+    font-size: .875rem;
+    line-height: 1.5;
+    height: auto;
+    caret-color: #00c7ae;
+    color: #323232;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+.input-reading{
+    padding-right: 0.5rem;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+}
+
+.center-search-open{
+    display: none;
+}
+.sreachKeyword{
+    display: none;
+}

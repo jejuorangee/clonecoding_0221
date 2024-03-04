@@ -4,74 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>soomgo</title>
+    <link rel="stylesheet" href="./../css/soomgo.css">
 </head>
 <body>
     <header class="header">
         <div class="header-nav">
             <section class="header-nav-section">
-                <div class="left-section">
-                    <div class="logo">
-                        <a><img src="https://assets.cdn.soomgo.com/icons/logo/navigation_logo.svg" alt="soomgo"/></a>
-                    </div>
-                    <nav class="left-nav">
-                        <ul class="left-nav-list">
-                            <li class="left-nav-list-item"><a>견적요청</a></li>
-                            <li class="left-nav-list-item"><a>고수찾기</a></li>
-                            <li class="left-nav-list-item"><a>마켓</a></li>
-                            <li class="left-nav-list-item"><a>커뮤니티</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="center-section">
-                    <form  >
-                        <div>
-                            <div>돋보기이미지<img/></div>
-                            <input type="text" placeholder="어떤 서비스가 필요하세요?"/>
-                            <div alt="sreachRemove">X이미지<img/></div>
+                <div class="header-nav-section-div">
+                    <div class="left-section">
+                        <div class="logo">
+                            <a><img src="https://assets.cdn.soomgo.com/icons/logo/navigation_logo.svg" alt="soomgo"/></a>
                         </div>
-                    </form>
-                    <!-- 검색창 클릭 시 나오는 검색어 -->
-                    <div>
-                        <div>
-                            <div>
-                                <ul>
-                                    <li><a>인기 키워드</a></li>
-                                    <li><a>최근 검색한 서비스</a></li>
-                                </ul>
+                        <nav class="left-nav">
+                            <ul class="left-nav-list">
+                                <li class="left-nav-list-item"><a>견적요청</a></li>
+                                <li class="left-nav-list-item"><a>고수찾기</a></li>
+                                <li class="left-nav-list-item"><a>마켓</a></li>
+                                <li class="left-nav-list-item"><a>커뮤니티</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="center-section">
+                        <form class="center-search-form">
+                            <div class="center-form-div">
+                                <div class="input-reading"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQgNCkiIHN0cm9rZT0iI0I1QjVCNSIgc3Ryb2tlLXdpZHRoPSIxLjYiPgogICAgICAgICAgICA8Y2lyY2xlIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGN4PSI2LjUiIGN5PSI2LjUiIHI9IjYuNSIvPgogICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIGQ9Im0xMS41IDExLjUgNSA1Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"/></div>
+                                <input type="text" placeholder="어떤 서비스가 필요하세요?" class="center-form-input"/>
+                                <div class="" alt="sreachRemove">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMgMykiPgogICAgICAgICAgICA8Y2lyY2xlIGZpbGw9IiNDNUM1QzUiIGN4PSI5IiBjeT0iOSIgcj0iOSIvPgogICAgICAgICAgICA8cGF0aCBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Im02IDYgNi4wMDUgNi4wMDZNMTIuMDA1IDYgNiAxMi4wMDYiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
+                                    alt="검색어 삭제 이미지" style="display: none;"/>
+                                </div>
                             </div>
-                            <!-- 인기키워드 -->
+                        </form>
+                        <!-- 검색창 클릭 시 나오는 검색어 -->
+                        <div class="center-search-open">
                             <div>
                                 <div>
                                     <ul>
-                                        <li><a>피아노/키보드 레슨</a></li>
-                                        <li><a>골프 레슨</a></li>
-                                        <li><a>퍼스널트레이닝(PT)</a></li>
-                                        <li><a>보컬레슨</a></li>
-                                        <li><a>수학 괴외</a></li>
-                                        <li><a>에어컨 설치 및 수리</a></li>
-                                        <li><a>문 설치 및 수리</a></li>
-                                        <li><a>수도관련 설치 및 수리</a></li>
+                                        <li><a>인기 키워드</a></li>
+                                        <li><a>최근 검색한 서비스</a></li>
                                     </ul>
                                 </div>
+                                <!-- 인기키워드 -->
                                 <div>
-                                    <!-- 최근 검색한 서비스 -->
+                                    <div class="sreachKeyword">
+                                        <ul>
+                                            <li><a>피아노/키보드 레슨</a></li>
+                                            <li><a>골프 레슨</a></li>
+                                            <li><a>퍼스널트레이닝(PT)</a></li>
+                                            <li><a>보컬레슨</a></li>
+                                            <li><a>수학 괴외</a></li>
+                                            <li><a>에어컨 설치 및 수리</a></li>
+                                            <li><a>문 설치 및 수리</a></li>
+                                            <li><a>수도관련 설치 및 수리</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <!-- 최근 검색한 서비스 -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div><a>전체 삭제</a></div>
-                            <div><a>닫기</a></div>
+                            <div>
+                                <div><a>전체 삭제</a></div>
+                                <div><a>닫기</a></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="right-section">
-                    <nav class="right-section-nav">
-                        <ul>
-                            <li><a>로그인</a></li>
-                            <li><a>회원가입</a></li>
-                        </ul>
-                        <button type="button">고수가입</button>
-                    </nav>
+                    <div class="right-section">
+                        <nav class="right-section-nav">
+                            <ul>
+                                <li><a>로그인</a></li>
+                                <li><a>회원가입</a></li>
+                            </ul>
+                            <button type="button">고수가입</button>
+                        </nav>
+                    </div>
                 </div>
             </section>
         </div>
