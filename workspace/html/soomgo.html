@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./../css/soomgo.css">
 </head>
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <div class="header-nav">
             <section class="header-nav-section">
                 <div class="header-nav-section-div">
@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                         </form>
-                        <!-- 검색창 클릭 시 나오는 검색어 -->
+                        <!-- 검색창 클릭 시 -->
                         <div class="center-search-open">
                             <div>
                                 <div>
@@ -59,7 +59,7 @@
                                         </ul>
                                     </div>
                                     <div>
-                                        <!-- 최근 검색한 서비스 -->
+                                        <!-- 최근 검색 -->
                                     </div>
                                 </div>
                             </div>
@@ -71,16 +71,937 @@
                     </div>
                     <div class="right-section">
                         <nav class="right-section-nav">
-                            <ul>
-                                <li><a>로그인</a></li>
-                                <li><a>회원가입</a></li>
+                            <ul class="right-nav-list">
+                                <li class="right-nav-list-item"><a>로그인</a></li>
+                                <li class="right-nav-list-item"><a>회원가입</a></li>
                             </ul>
-                            <button type="button">고수가입</button>
+                            <button type="button" class="btn pro-signup right-nav-list-item btn-primary">고수가입</button>
                         </nav>
                     </div>
                 </div>
             </section>
         </div>
     </header>
+    <div id="app-body">
+        <div class="home">
+            <!-- 배너 -->
+            <div class="banner">
+                <div class="main-banner">
+                    <div class="slide-banner">
+                        <img srcset="https://static.cdn.soomgo.com/upload/banner/5627b8e2-6792-4d79-837a-b2dfd63568d7.png?w=970&webp=1"
+                        alt="배너이미지" class="banner-img"/>
+                    </div>
+                    <div class="slide-banner">
+                        <img srcset="https://static.cdn.soomgo.com/upload/banner/92cfd47f-2f0a-48b0-86e6-5e3515463d7a.png?w=970&webp=1"
+                        alt="배너이미지" class="banner-img"/>
+                    </div>
+                    <div class="slide-banner">
+                        <img srcset="https://static.cdn.soomgo.com/upload/banner/8a9d2fb8-a4eb-4603-9646-75f8bcd7e1d9.png?w=970&webp=1"
+                        alt="배너이미지" class="banner-img"/>
+                    </div>
+                    <div class="slide-banner">
+                        <img srcset="https://static.cdn.soomgo.com/upload/banner/38838747-5a3b-4a2f-ba28-96999dc7c51f.png?w=970&webp=1"
+                        alt="배너이미지" class="banner-img"/>
+                    </div>
+                    <div class="slide-banner">
+                        <img srcset="https://static.cdn.soomgo.com/upload/banner/31497f4b-3972-4f76-9d28-d906ef15f05f.png?w=970&webp=1"
+                        alt="배너이미지" class="banner-img"/>
+                    </div>
+                    <a class="prev"></a>
+                    <div class="indicator"></div>
+                </div>
+            </div>
+
+            <!-- main category -->
+            <ul class="container main-category category-list">
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMiAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuODAwMDUgNy42OTk5OUM0LjgwMDA1IDYuMzc0NSA1Ljg3NDU3IDUuMjk5OTkgNy4yMDAwNSA1LjI5OTk5SDEyLjRDMTMuNzI1NSA1LjI5OTk5IDE0LjggNi4zNzQ1IDE0LjggNy42OTk5OVYxMi45QzE0LjggMTQuMjI1NSAxMy43MjU1IDE1LjMgMTIuNCAxNS4zSDcuMjAwMDVDNS44NzQ1NyAxNS4zIDQuODAwMDUgMTQuMjI1NSA0LjgwMDA1IDEyLjlWNy42OTk5OVoiIGZpbGw9IiNDN0NFRDYiLz4KPHBhdGggZD0iTTE3LjIgNy42OTk5OUMxNy4yIDYuMzc0NSAxOC4yNzQ1IDUuMjk5OTkgMTkuNiA1LjI5OTk5SDI0LjhDMjYuMTI1NCA1LjI5OTk5IDI3LjIgNi4zNzQ1IDI3LjIgNy42OTk5OVYxMi45QzI3LjIgMTQuMjI1NSAyNi4xMjU0IDE1LjMgMjQuOCAxNS4zSDE5LjZDMTguMjc0NSAxNS4zIDE3LjIgMTQuMjI1NSAxNy4yIDEyLjlWNy42OTk5OVoiIGZpbGw9IiM4RjlBQUIiLz4KPHBhdGggZD0iTTQuODAwMDUgMjAuMUM0LjgwMDA1IDE4Ljc3NDUgNS44NzQ1NyAxNy43IDcuMjAwMDUgMTcuN0gxMi40QzEzLjcyNTUgMTcuNyAxNC44IDE4Ljc3NDUgMTQuOCAyMC4xVjI1LjNDMTQuOCAyNi42MjU1IDEzLjcyNTUgMjcuNyAxMi40IDI3LjdINy4yMDAwNUM1Ljg3NDU3IDI3LjcgNC44MDAwNSAyNi42MjU1IDQuODAwMDUgMjUuM1YyMC4xWiIgZmlsbD0iIzhGOUFBQiIvPgo8cGF0aCBkPSJNMTcuMiAyMC4xQzE3LjIgMTguNzc0NSAxOC4yNzQ1IDE3LjcgMTkuNiAxNy43SDI0LjhDMjYuMTI1NCAxNy43IDI3LjIgMTguNzc0NSAyNy4yIDIwLjFWMjUuM0MyNy4yIDI2LjYyNTUgMjYuMTI1NCAyNy43IDI0LjggMjcuN0gxOS42QzE4LjI3NDUgMjcuNyAxNy4yIDI2LjYyNTUgMTcuMiAyNS4zVjIwLjFaIiBmaWxsPSIjNUQ2OTdBIi8+Cjwvc3ZnPgo="
+                                alt="전체보기" calss="category-img" />
+                            </div>
+                            <p class="category-title">전체보기</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/0a9a3bf9-4ce6-4968-8090-5bfcf1164bcb.svg"
+                                alt="이사/청소" calss="category-img" />
+                            </div>
+                            <p class="category-title">이사/청소</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/e4d5703c-b00a-4bc6-89c7-7974a1dcc5c0.svg"
+                                alt="설치/수리" calss="category-img" />
+                            </div>
+                            <p class="category-title">설치/수리</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/6f901591-4786-4433-a60b-c0c5834408bb.svg"
+                                alt="인테리어" calss="category-img" />
+                            </div>
+                            <p class="category-title">인테리어</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/09761ce6-dcff-438c-90f8-5b332e64a2ad.svg"
+                                alt="외주" calss="category-img" />
+                            </div>
+                            <p class="category-title">외주</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/44894f45-0d19-407e-aa34-fc81bcfb89a5.svg"
+                                alt="이벤트/뷰티" calss="category-img" />
+                            </div>
+                            <p class="category-title">이벤트/뷰티</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/f676b79f-04aa-4da4-ac35-588acf733023.svg"
+                                alt="취업/직무" calss="category-img" />
+                            </div>
+                            <p class="category-title">취업/직무</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/800bf71e-8204-4ff7-bb28-04000f385bcd.svg"
+                                alt="과외" calss="category-img" />
+                            </div>
+                            <p class="category-title">과외</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/13513f83-e282-41ee-9677-e72bd5832e82.svg"
+                                alt="취미/자기개발" calss="category-img" />
+                            </div>
+                            <p class="category-title">취미/자기개발</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/eca6bc22-7b6f-4d5b-8a2e-83fb5577341c.svg"
+                                alt="자동차" calss="category-img" />
+                            </div>
+                            <p class="category-title">자동차</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/89522c85-5923-4cda-8019-797c00faad37.svg"
+                                alt="법률/금융" calss="category-img" />
+                            </div>
+                            <p class="category-title">법률/금융</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#">
+                        <div class="category-icon">
+                            <div class="category-img-wrap">
+                                <img src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/25f0e364-93ad-4d49-b710-3a2f073dc547.svg"
+                                alt="기타" calss="category-img" />
+                            </div>
+                            <p class="category-title">기타</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- 숨고 인기 서비스 -->
+            <div class="main-service container">
+                <h2 class="title">숨고 인기 서비스</h2>
+                <div class="main-slide">
+                    <div class="service-slide">
+                        <button type="button" class="service-slide-prev slick-arrow slide-prev" style="display: block;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxmaWx0ZXIgeD0iLTEyLjUlIiB5PSItMTAlIiB3aWR0aD0iMTI1JSIgaGVpZ2h0PSIxMjUlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj48ZmVPZmZzZXQgZHk9IjEiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxLjUiIGluPSJzaGFkb3dPZmZzZXRPdXRlcjEiIHJlc3VsdD0ic2hhZG93Qmx1ck91dGVyMSIvPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4yIDAiIGluPSJzaGFkb3dCbHVyT3V0ZXIxIi8+PC9maWx0ZXI+PGNpcmNsZSBpZD0iYiIgY3g9IjI0IiBjeT0iMjQiIHI9IjIwIi8+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHVzZSBmaWxsPSIjMDAwIiBmaWx0ZXI9InVybCgjYSkiIHhsaW5rOmhyZWY9IiNiIi8+PHVzZSBmaWxsPSIjRkZGIiB4bGluazpocmVmPSIjYiIvPjxwYXRoIGQ9Ik0xMiAxMmgyNHYyNEgxMnoiLz48cGF0aCBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMS43IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0yNiAzMWwtNy03IDctNyIvPjwvZz48L3N2Zz4=" />
+                        </button>
+                        <div class="slide-list">
+                            <div class="slide-track">
+                                <div data-index="0" aria-hidden="flase" class="slick-slide slick-active slick-current">
+                                    <div>
+                                        <a href="#" style="width: 100%;
+                                        display: inline-block;">
+                                            <div class="main-service-card">
+                                                <img alt="피아노" class="service-img" 
+                                                src="https://dmmj3ljielax6.cloudfront.net/upload/service/e83966e9-77de-452c-a188-1e14d07eaee2.png?h=302&w=458&webp=1" />
+                                                <p class="service-name">피아노/키보드 레슨</p>
+                                                <div class="request-count">
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+                                                    alt="요청서 아이콘" class="request-icon" />
+                                                    <span>232,840</span>
+                                                    명 요청
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="1" class="slick-slide slick-active slick-current">
+                                    <div>
+                                        <a href="#" style="width: 100%;
+                                        display: inline-block;">
+                                            <div class="main-service-card">
+                                                <img alt="골프레슨" class="service-img" 
+                                                src="https://dmmj3ljielax6.cloudfront.net/upload/service/edfc1261-a293-4875-8024-99032b98daa5.png?h=302&w=458&webp=1" />
+                                                <p class="service-name">골프 레슨</p>
+                                                <div class="request-count">
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+                                                    alt="요청서 아이콘" class="request-icon" />
+                                                    <span>363,540</span>
+                                                    명 요청
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="2" class="slick-slide slick-active slick-current">
+                                    <div>
+                                        <a href="#" style="width: 100%;
+                                        display: inline-block;">
+                                            <div class="main-service-card">
+                                                <img alt="퍼스널트레이닝" class="service-img" 
+                                                src="https://dmmj3ljielax6.cloudfront.net/upload/service/6a497fde-2ba4-4a59-977c-41ce3be83e08.png?h=302&w=458&webp=1" />
+                                                <p class="service-name">퍼스널트레이닝(PT)</p>
+                                                <div class="request-count">
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+                                                    alt="요청서 아이콘" class="request-icon" />
+                                                    <span>651,780</span>
+                                                    명 요청
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="3" class="slick-slide slick-active slick-current">
+                                    <div>
+                                        <a href="#" style="width: 100%;
+                                        display: inline-block;">
+                                            <div class="main-service-card">
+                                                <img alt="보컬레슨" class="service-img" 
+                                                src="https://dmmj3ljielax6.cloudfront.net/upload/service/85e81b4b-4b9e-4b45-b9ac-950a342788bc.png?h=302&w=458&webp=1" />
+                                                <p class="service-name">보컬레슨</p>
+                                                <div class="request-count">
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+                                                    alt="요청서 아이콘" class="request-icon" />
+                                                    <span>436,174</span>
+                                                    명 요청
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="4" class="slick-slide slick-active slick-current" style="display:none;">
+                                    <div>
+                                        <a href="#" style="width: 100%;
+                                        display: inline-block;">
+                                            <div class="main-service-card">
+                                                <img alt="수학 과외" class="service-img" 
+                                                src="https://dmmj3ljielax6.cloudfront.net/upload/service/95b493f1-8ef3-43a2-b8bb-e9bfda642968.png?h=302&w=458&webp=1" />
+                                                <p class="service-name">수학 과외</p>
+                                                <div class="request-count">
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+                                                    alt="요청서 아이콘" class="request-icon" />
+                                                    <span>312,094</span>
+                                                    명 요청
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="5" class="slick-slide slick-active slick-current" style="display:none;">
+                                    <div>
+                                        <a href="#" style="width: 100%;
+                                        display: inline-block;">
+                                            <div class="main-service-card">
+                                                <img alt="에어컨 설치 및 수리" class="service-img" 
+                                                src="https://dmmj3ljielax6.cloudfront.net/upload/service/718adb73-9adf-4a47-a9f2-7b1f3186026e.png?h=302&w=458&webp=1" />
+                                                <p class="service-name">에어컨 설치 및 수리</p>
+                                                <div class="request-count">
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+                                                    alt="요청서 아이콘" class="request-icon" />
+                                                    <span>811,119</span>
+                                                    명 요청
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="6" class="slick-slide slick-active slick-current" style="display:none;">
+                                    <div>
+                                        <a href="#" style="width: 100%;
+                                        display: inline-block;">
+                                            <div class="main-service-card">
+                                                <img alt="문 설치 및 수리" class="service-img" 
+                                                src="https://dmmj3ljielax6.cloudfront.net/upload/service/featured_service_9533951a-57bd-4622-b65a-f8866819be6b.jpg?h=302&w=458&webp=1" />
+                                                <p class="service-name">문 설치 및 수리</p>
+                                                <div class="request-count">
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+                                                    alt="요청서 아이콘" class="request-icon" />
+                                                    <span>267,941</span>
+                                                    명 요청
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="7" class="slick-slide slick-active slick-current" style="display:none;">
+                                    <div>
+                                        <a href="#" style="width: 100%;
+                                        display: inline-block;">
+                                            <div class="main-service-card">
+                                                <img alt="수도 관련 설치 및 수리" class="service-img" 
+                                                src="https://dmmj3ljielax6.cloudfront.net/upload/service/featured_service_50de53e6-8c82-4d7b-a9db-aff280606228.jpg?h=302&w=458&webp=1" />
+                                                <p class="service-name">수도 관련 설치 및 수리</p>
+                                                <div class="request-count">
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+                                                    alt="요청서 아이콘" class="request-icon" />
+                                                    <span>267,941</span>
+                                                    명 요청
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="service-slide-next slick-arrow slide-next">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxmaWx0ZXIgeD0iLTEyLjUlIiB5PSItMTAlIiB3aWR0aD0iMTI1JSIgaGVpZ2h0PSIxMjUlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj48ZmVPZmZzZXQgZHk9IjEiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxLjUiIGluPSJzaGFkb3dPZmZzZXRPdXRlcjEiIHJlc3VsdD0ic2hhZG93Qmx1ck91dGVyMSIvPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4yIDAiIGluPSJzaGFkb3dCbHVyT3V0ZXIxIi8+PC9maWx0ZXI+PGNpcmNsZSBpZD0iYiIgY3g9IjI0IiBjeT0iMjQiIHI9IjIwIi8+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHVzZSBmaWxsPSIjMDAwIiBmaWx0ZXI9InVybCgjYSkiIHhsaW5rOmhyZWY9IiNiIi8+PHVzZSBmaWxsPSIjRkZGIiB4bGluazpocmVmPSIjYiIvPjxwYXRoIGQ9Ik0xMiAxMmgyNHYyNEgxMnoiLz48cGF0aCBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMS43IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0yMiAzMWw3LTctNy03Ii8+PC9nPjwvc3ZnPg==" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 숨고 커뮤니티 -->
+            <div class="main-community slide-knowhow-list container">
+                <section class="header short-bottom">
+                    <h2 class="title">숨고 커뮤니티에 물어보세요</h2>
+                    <a herf="#" class="go-list">
+                        <span>전체보기</span>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNTMuMDAwMDAwLCAtMjAyLjAwMDAwMCkgdHJhbnNsYXRlKDQ4NS4wMDAwMDAsIDE4OC4wMDAwMDApIHRyYW5zbGF0ZSg1NjguMDAwMDAwLCAxNC4wMDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMDBDN0FFIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTEgMTNMNiA4IDExIDMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDUzLjAwMDAwMCwgLTIwMi4wMDAwMDApIHRyYW5zbGF0ZSg0ODUuMDAwMDAwLCAxODguMDAwMDAwKSB0cmFuc2xhdGUoNTY4LjAwMDAwMCwgMTQuMDAwMDAwKSB0cmFuc2xhdGUoOC41MDAwMDAsIDguMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04LjUwMDAwMCwgLTguMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" />
+                    </a>
+                </section>
+                <div class="main-community-contents">
+                    <div class="desktop-section">
+                        <div class="curation-container half-list">
+                            <ul class="curation-list">
+                                <li class="curation-list-item">
+                                    <a href="#" class="curation-list-wrapper">
+                                        <div class="curation-contents has-thumbnail">
+                                            <p class="topic-name">숨고이야기</p>
+                                            <p class="curation-title">EP03 댄스스포츠 레슨 조소휘 고수 🔭</p>
+                                        
+                                            <p class="curation-content">
+                                                본업 천재 라틴 디바 댄스스포츠 레슨 조소휘 고수 '밝을 소, 빛날 휘' 이름처럼 빛나고 밝은 에너지로 행복을 전달하는 숨고의 '댄스스포츠 라틴 강사 조소휘 고수 💃'    
+                                                댄스스포츠는 궁중문화에서 유래되었으며 춤에서 규칙을 더해 실력을 겨루고 승패를 가르는 '...
+                                            </p>
+                                            <div class="curation-reactions">
+                                                <span class="view-count">
+                                                    5,773
+                                                </span>
+                                                <span class="comment-count">
+                                                    31
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="curation-topic-img">
+                                            <img alt="내일을 찾아서 썸네일" class="topic-thumbnail-img"
+                                            src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/ef139e1e-3d70-4abc-bacd-cade72f7c896.png?h=128&w=128&webp=1" />
+                                        </div>
+                                    </a>
+                                    <a href="#" class="curation-list-wrapper">
+                                        <div class="curation-contents">
+                                            <p class="topic-name">궁금해요</p>
+                                            <p class="curation-title">도배랑 줄눈시공 당일 같이할 수 있을까요</p>
+                                        
+                                            <p class="curation-content">
+                                                작업하시는 위치가 상이해서 양해만 구하면 동시 시공 될까요?  시트지는 안되는걸로 알고있는데 줄눈정도는 되지않을까요 ㅜㅜ 
+                                                시간이 빠듯하니 이시공 저시공 마냥 기다려줄수가 없네요
+                                            </p>
+                                            <div class="curation-reactions">
+                                                <span class="view-count">
+                                                    120
+                                                </span>
+                                                <span class="comment-count">
+                                                    44
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="curation-list-wrapper">
+                                        <div class="curation-contents has-thumbnail">
+                                            <p class="topic-name">궁금해요</p>
+                                            <p class="curation-title">전등을 달고싶은데요.</p>
+                                        
+                                            <p class="curation-content">
+                                                아파트 사진에 동그란 부분에 저 전등을 달고싶은데 천장에 석고보드? 라고 하는거 같아요. 저 등이 무게가 꽤 나가거든요. 
+                                                달 수 있는지가 너무 궁금합니다!!!!!!!!!!!!!!! 부모님이 얼핏 들어보곤 10kg 정도 된다고 하시는거 같거든요.
+                                            </p>
+                                            <div class="curation-reactions">
+                                                <span class="view-count">
+                                                    134
+                                                </span>
+                                                <span class="comment-count">
+                                                    88
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="curation-topic-img">
+                                            <img alt="전등을 달고싶은데요 썸네일" class="topic-thumbnail-img"
+                                            src="https://static.cdn.soomgo.com/upload/media/268cfd25-e089-44fb-82dd-c8abf3287742.jpg?h=128&w=128&webp=1" />
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="knowhow-container half-list">
+                            <a class="knowhow-card-slide">
+                                <img alt="방송안무 레슨합니다 !!!!" class="thumb-img"
+                                src="https://static.cdn.soomgo.com/upload/media/ba2450c9-a9df-47bd-a8df-169e415a6b78.jpg?h=320&w=480&webp=1" />
+                                <div class="card-desc">
+                                    <p class="service">방송댄스 레슨</p>
+                                    <div class="collapsed">
+                                        <div class="line-clamp" style="line-height: 1.5; max-height: 3rem; -webkit-line-clamp: 2;">
+                                            <p class="title">방송안무 레슨합니다 !!!!</p>
+                                        </div>
+                                    </div>
+                                    <p class="author">댄서</p>
+                                </div>
+                            </a>
+                            <a class="knowhow-card-slide">
+                                <img alt="정수기 어쩌구 싸망고" class="thumb-img"
+                                src="https://static.cdn.soomgo.com/upload/community/eef83d90-765a-4ca3-ba96-8654ff458828.png?h=320&w=480&webp=1" />
+                                <div class="card-desc">
+                                    <p class="service">정수기 렌탈</p>
+                                    <div class="collapsed">
+                                        <div class="line-clamp" style="line-height: 1.5; max-height: 3rem; -webkit-line-clamp: 2;">
+                                            <p" class="title">정수기,청정기,비데는 역시!! 싸망고!!</p>
+                                        </div>
+                                    </div>
+                                    <p class="author">싸망고</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 지금 인기 있는 고수 -->
+            <div class="container">
+                <div class="main-popular-pro">
+                    <section class="header">
+                        <h2 class="title">지금 인기 있는 고수</h2>
+                        <a href="#" class="go-list">
+                            <span>전체보기</span>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNTMuMDAwMDAwLCAtMjAyLjAwMDAwMCkgdHJhbnNsYXRlKDQ4NS4wMDAwMDAsIDE4OC4wMDAwMDApIHRyYW5zbGF0ZSg1NjguMDAwMDAwLCAxNC4wMDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMDBDN0FFIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTEgMTNMNiA4IDExIDMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDUzLjAwMDAwMCwgLTIwMi4wMDAwMDApIHRyYW5zbGF0ZSg0ODUuMDAwMDAwLCAxODguMDAwMDAwKSB0cmFuc2xhdGUoNTY4LjAwMDAwMCwgMTQuMDAwMDAwKSB0cmFuc2xhdGUoOC41MDAwMDAsIDguMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04LjUwMDAwMCwgLTguMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" />
+                        </a>
+                    </section>
+                    <section class="chips">
+                        <button type="button" class="btn btn-secondary chip"><span>원룸/소형 이사</span></button>
+                        <button type="button" class="btn btn-secondary chip selected"><span>수영 레슨</span></button>
+                        <button type="button" class="btn btn-secondary chip"><span>용달/화물 운송</span></button>
+                        <button type="button" class="btn btn-secondary chip"><span>도배 시공</span></button>
+                    </section>
+                    <div class="slick-slider slick-initialized">
+                        <button type="button" class="service-slide-prev slick-arrow slide-prev" style="display: block;">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxmaWx0ZXIgeD0iLTEyLjUlIiB5PSItMTAlIiB3aWR0aD0iMTI1JSIgaGVpZ2h0PSIxMjUlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj48ZmVPZmZzZXQgZHk9IjEiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxLjUiIGluPSJzaGFkb3dPZmZzZXRPdXRlcjEiIHJlc3VsdD0ic2hhZG93Qmx1ck91dGVyMSIvPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4yIDAiIGluPSJzaGFkb3dCbHVyT3V0ZXIxIi8+PC9maWx0ZXI+PGNpcmNsZSBpZD0iYiIgY3g9IjI0IiBjeT0iMjQiIHI9IjIwIi8+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHVzZSBmaWxsPSIjMDAwIiBmaWx0ZXI9InVybCgjYSkiIHhsaW5rOmhyZWY9IiNiIi8+PHVzZSBmaWxsPSIjRkZGIiB4bGluazpocmVmPSIjYiIvPjxwYXRoIGQ9Ik0xMiAxMmgyNHYyNEgxMnoiLz48cGF0aCBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMS43IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0yNiAzMWwtNy03IDctNyIvPjwvZz48L3N2Zz4=" />
+                        </button>
+                        <div class="slick-list">
+                            <div class="slick-track" style="width: 2548px; opacity: 1;">
+                                <div data-index="0" class="slick-slide" style="outline: none; width: 196px;">
+                                    <div>
+                                        <a href="#" style="width: 100%; display: inline-block;">
+                                            <section class="meet-provider">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI0ZGRiIgZD0iTS0xMTItMjE4NWgxMTcwdjUzNzFILTExMnoiLz4KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTIgLTEyKSI+CiAgICAgICAgICAgIDxyZWN0IGZpbGw9IiNGMkYyRjIiIHdpZHRoPSIxODIiIGhlaWdodD0iMTgyIiByeD0iOCIvPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMiAxMikiPgogICAgICAgICAgICAgICAgPGNpcmNsZSBmaWxsPSIjRDRFMEZFIiBmaWxsLXJ1bGU9Im5vbnplcm8iIGN4PSIyOCIgY3k9IjI4IiByPSIyOCIvPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTM0LjI3IDE2LjA3OGEzLjI3OCAzLjI3OCAwIDAgMC0zLjI4IDMuMTYybC0uMzY1IDEwLjc5NWg3LjI5MWwtLjM2NS0xMC43OTVhMy4yNzggMy4yNzggMCAwIDAtMy4yOC0zLjE2MnpNMjEuMjkyIDE2LjA3OGEzLjI3NyAzLjI3NyAwIDAgMC0zLjI4IDMuMTYybC0uMzY2IDEwLjc5NWg3LjI5MWwtLjM2NS0xMC43OTVhMy4yNzggMy4yNzggMCAwIDAtMy4yOC0zLjE2MnoiIGZpbGw9IiM1MDgwRkEiLz4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Im0zNi44NzcgMTcuOTg1LTcuOTQ4LjUwNmMtLjYxOS4wMzktMS4yNC4wMzktMS44NTggMGwtNy45NDgtLjUwNmE1LjI0NiA1LjI0NiAwIDAgMC01LjUzIDQuNDY4bC0xLjM0MyA5LjE4MmgzMS41bC0xLjM0My05LjE4MmE1LjI0NiA1LjI0NiAwIDAgMC01LjUzLTQuNDY4eiIgZmlsbD0iIzgwQTNGQyIvPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTM4LjEzNSAyNi4yNTVoLTIwLjI3Yy0zLjEwMSAwLTUuNjE1IDIuNTA2LTUuNjE1IDUuNTk4IDAgMy4wOTEgMi41MTQgNS41OTcgNS42MTUgNS41OTdoMjAuMjdjMy4xMDEgMCA1LjYxNS0yLjUwNiA1LjYxNS01LjU5NyAwLTMuMDkyLTIuNTE0LTUuNTk4LTUuNjE1LTUuNTk4eiIgZmlsbD0iIzQyNzBGOCIvPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTM1IDM5LjkyMmMtMy41NDQgMC02LjQxNy0yLjg2NC02LjQxNy02LjM5NyAwLTMuNTMzIDIuODczLTYuMzk3IDYuNDE3LTYuMzk3IDMuNTQzIDAgNi40MTYgMi44NjQgNi40MTYgNi4zOTcgMCAzLjUzMy0yLjg3MyA2LjM5Ny02LjQxNiA2LjM5N3oiIGZpbGw9IiMyQzNFRDAiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTM0Ljk5OSAzNy4xNmEzLjY0IDMuNjQgMCAwIDEtMy42NDYtMy42MzVBMy42NCAzLjY0IDAgMCAxIDM1IDI5Ljg5YTMuNjQgMy42NCAwIDAgMSAzLjY0NiAzLjYzNSAzLjY0IDMuNjQgMCAwIDEtMy42NDYgMy42MzV6IiBmaWxsPSIjRUZGNEZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMC43MDggMzkuOTIyYy0zLjU0MyAwLTYuNDE2LTIuODY0LTYuNDE2LTYuMzk3IDAtMy41MzMgMi44NzMtNi4zOTcgNi40MTYtNi4zOTcgMy41NDQgMCA2LjQxNyAyLjg2NCA2LjQxNyA2LjM5NyAwIDMuNTMzLTIuODczIDYuMzk3LTYuNDE3IDYuMzk3eiIgZmlsbD0iIzJDM0VEMCIgZmlsbC1ydWxlPSJub256ZXJvIi8+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMjAuNzA4IDM3LjE2YTMuNjQgMy42NCAwIDAgMS0zLjY0Ni0zLjYzNSAzLjY0IDMuNjQgMCAwIDEgMy42NDYtMy42MzUgMy42NCAzLjY0IDAgMCAxIDMuNjQ2IDMuNjM1IDMuNjQgMy42NCAwIDAgMS0zLjY0NiAzLjYzNXoiIGZpbGw9IiNFRkY0RkYiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+                                                alt="고수 만나러가기" class="meet-provider-icon" />
+                                                <span class="meet-provider-text total">2,049명</span>
+                                                <span class="meet-provider-text">의</span>
+                                                <br>
+                                                <div class="meet-provider-link">
+                                                    <span class="meet-provider-text">고수 만나보기</span>
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxMnYxMkgweiIvPgogICAgICAgIDxwYXRoIHN0cm9rZT0iIzJEMkQyRCIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTQgMTAgNC00LTQtNCIvPgogICAgPC9nPgo8L3N2Zz4K" />
+                                                </div>
+                                            </section>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="1" class="slick-slide" style="outline: none; width: 196px;">
+                                    <div>
+                                        <a href="#" style="width: 100%; display: inline-block;">
+                                            <div class="main-pro-card">
+                                                <section class="header">
+                                                    <div class="thumb"
+                                                    style="background-image: url(https://dmmj3ljielax6.cloudfront.net/upload/profile/6a9ffd98-8f61-4c16-af38-10c61e631ca1.jpg?h=96&w=96&webp=1);">
+                                                    </div>
+                                                    <div class="review">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=" />
+                                                        <span class="rate">5.0</span>
+                                                    </div>
+                                                </section>
+                                                <p class="name">정종욱</p>
+                                                <section class="chips">
+                                                    <span class="soomgopay-chip d-flex">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHJlY3QgZmlsbD0iIzUwODBGQSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiByeD0iMyIvPgogICAgICAgIDxwYXRoIGQ9Ik04LjU1MyAyLjQwMkM4LjI1NSAyLjEzNCA3Ljg2OSAyIDcuMzk2IDJjLS42MyAwLTEuMTcuMTg3LTEuNjIuNTZhMi4wMyAyLjAzIDAgMCAwLS43NTYgMS4zNzljLS4wMTUuMTcxLS4wMTIuNTY2LjIxNSAxLjA3LjExNS4yMjYuMzA0LjQ5LjU3Ljc5Mi4zOC40MzUuNjI4Ljc1Ni43NDMuOTY0LjExNS4yMDcuMTcyLjQzNy4xNzIuNjkgMCAuNDAxLS4xNDEuNzQ5LS40MjQgMS4wNDQtLjI4My4yOTUtLjYxNi40NDMtMSAuNDQzLS4zNDYgMC0uNjMzLS4xMTItLjg1OC0uMzM1YTEuMTQ0IDEuMTQ0IDAgMCAxLS4zMzgtLjg0OWMwLS4yMTYuMDY0LS40MzUuMTkzLS42NTYuMTI4LS4yMi4yODctLjM5Mi40NzktLjUxNmwtLjAwMi0uMDAyYS41NTMuNTUzIDAgMCAwIC4yNy0uNDc3YzAtLjMwNC0uMjQtLjU1LS41MzYtLjU1YS41Mi41MiAwIDAgMC0uMjUyLjA2NVY1LjYyYy0uMDkxLjA1NS0uMTgzLjEyMS0uMjc4LjE5OEMzLjMyNCA2LjM0NiAzIDcuMDA0IDMgNy43OTNjMCAuNjQ1LjIwOSAxLjE3NC42MjYgMS41ODcuNDE3LjQxMy45NTEuNjIgMS42MDQuNjIuODQyIDAgMS41MjQtLjMwNyAyLjA0NC0uOTJhMi4zMyAyLjMzIDAgMCAwIC41NzEtMS41NmMwLS42MS0uMjE1LTEuMTg5LS42NDYtMS43MzZsLS4yMjMtLjI3Ni0uMTQ0LS4xODgtLjU0OC0uNzAxYy0uMzAyLS4zOC0uMTc1LS43ODUtLjE3NS0uNzg1LjA1LS4xOTEuMTc0LS4zNjUuMzc0LS41Mi4yNDgtLjE5NC41MjMtLjI5LjgyNS0uMjlhLjguOCAwIDAgMSAuNDY0LjEyYy4xMTYuMDgxLjE3NC4xODguMTc0LjMyIDAgLjI0Ny0uMTUuNDAzLS40NS40NzFsLjAwMS4wMDFhLjUxNi41MTYgMCAwIDAtLjQwNi41MWMwIC4yODcuMjI2LjUyLjUwNS41Mi4wNCAwIC4wNzktLjAwNS4xMTYtLjAxNC4yNC0uMDQzLjQzMy0uMTEuNTc4LS4yMDUuNDczLS4zMDIuNzEtLjczNy43MS0xLjMwNCAwLS40MjYtLjE0OS0uNzczLS40NDctMS4wNDEiIGZpbGw9IiNGRkYiLz4KICAgIDwvZz4KPC9zdmc+Cg=="
+                                                        alt="숨고페이 아이콘" />
+                                                        <span>숨고페이</span>
+                                                    </span>
+                                                </section>
+                                                <section class="sub-info">
+                                                    <span>경력 9년</span>
+                                                    <span class="avg-response-time has-career">
+                                                        "평균 30분 내 응답"
+                                                    </span>
+                                                </section>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="2" class="slick-slide" style="outline: none; width: 196px;">
+                                    <div>
+                                        <a href="#" style="width: 100%; display: inline-block;">
+                                            <div class="main-pro-card">
+                                                <section class="header">
+                                                    <div class="thumb"
+                                                    style="background-image: url(https://dmmj3ljielax6.cloudfront.net/upload/profile/bc2c4e91-8413-4824-8561-c266ebd657a4.jpg?h=96&w=96&webp=1);">
+                                                    </div>
+                                                    <div class="review">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=" />
+                                                        <span class="rate">5.0</span>
+                                                    </div>
+                                                </section>
+                                                <p class="name">✅️대전 수영레슨 숨고 "1위"✅️ 김두현 강사</p>
+                                                <section class="chips">
+                                                    <span class="soomgopay-chip d-flex">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHJlY3QgZmlsbD0iIzUwODBGQSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiByeD0iMyIvPgogICAgICAgIDxwYXRoIGQ9Ik04LjU1MyAyLjQwMkM4LjI1NSAyLjEzNCA3Ljg2OSAyIDcuMzk2IDJjLS42MyAwLTEuMTcuMTg3LTEuNjIuNTZhMi4wMyAyLjAzIDAgMCAwLS43NTYgMS4zNzljLS4wMTUuMTcxLS4wMTIuNTY2LjIxNSAxLjA3LjExNS4yMjYuMzA0LjQ5LjU3Ljc5Mi4zOC40MzUuNjI4Ljc1Ni43NDMuOTY0LjExNS4yMDcuMTcyLjQzNy4xNzIuNjkgMCAuNDAxLS4xNDEuNzQ5LS40MjQgMS4wNDQtLjI4My4yOTUtLjYxNi40NDMtMSAuNDQzLS4zNDYgMC0uNjMzLS4xMTItLjg1OC0uMzM1YTEuMTQ0IDEuMTQ0IDAgMCAxLS4zMzgtLjg0OWMwLS4yMTYuMDY0LS40MzUuMTkzLS42NTYuMTI4LS4yMi4yODctLjM5Mi40NzktLjUxNmwtLjAwMi0uMDAyYS41NTMuNTUzIDAgMCAwIC4yNy0uNDc3YzAtLjMwNC0uMjQtLjU1LS41MzYtLjU1YS41Mi41MiAwIDAgMC0uMjUyLjA2NVY1LjYyYy0uMDkxLjA1NS0uMTgzLjEyMS0uMjc4LjE5OEMzLjMyNCA2LjM0NiAzIDcuMDA0IDMgNy43OTNjMCAuNjQ1LjIwOSAxLjE3NC42MjYgMS41ODcuNDE3LjQxMy45NTEuNjIgMS42MDQuNjIuODQyIDAgMS41MjQtLjMwNyAyLjA0NC0uOTJhMi4zMyAyLjMzIDAgMCAwIC41NzEtMS41NmMwLS42MS0uMjE1LTEuMTg5LS42NDYtMS43MzZsLS4yMjMtLjI3Ni0uMTQ0LS4xODgtLjU0OC0uNzAxYy0uMzAyLS4zOC0uMTc1LS43ODUtLjE3NS0uNzg1LjA1LS4xOTEuMTc0LS4zNjUuMzc0LS41Mi4yNDgtLjE5NC41MjMtLjI5LjgyNS0uMjlhLjguOCAwIDAgMSAuNDY0LjEyYy4xMTYuMDgxLjE3NC4xODguMTc0LjMyIDAgLjI0Ny0uMTUuNDAzLS40NS40NzFsLjAwMS4wMDFhLjUxNi41MTYgMCAwIDAtLjQwNi41MWMwIC4yODcuMjI2LjUyLjUwNS41Mi4wNCAwIC4wNzktLjAwNS4xMTYtLjAxNC4yNC0uMDQzLjQzMy0uMTEuNTc4LS4yMDUuNDczLS4zMDIuNzEtLjczNy43MS0xLjMwNCAwLS40MjYtLjE0OS0uNzczLS40NDctMS4wNDEiIGZpbGw9IiNGRkYiLz4KICAgIDwvZz4KPC9zdmc+Cg=="
+                                                        alt="숨고페이 아이콘" />
+                                                        <span>숨고페이</span>
+                                                    </span>
+                                                </section>
+                                                <section class="sub-info">
+                                                    <span>경력 7년</span>
+                                                    <span class="avg-response-time has-career">
+                                                        "평균 1시간 내 응답"
+                                                    </span>
+                                                </section>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="3" class="slick-slide" style="outline: none; width: 196px;">
+                                    <div>
+                                        <a href="#" style="width: 100%; display: inline-block;">
+                                            <div class="main-pro-card">
+                                                <section class="header">
+                                                    <div class="thumb"
+                                                    style="background-image: url(https://dmmj3ljielax6.cloudfront.net/upload/profile/07c2deac-351f-4f5e-88c5-9581f9534026.jpg?h=96&w=96&webp=1);">
+                                                    </div>
+                                                    <div class="review">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=" />
+                                                        <span class="rate">5.0</span>
+                                                    </div>
+                                                </section>
+                                                <p class="name">단영민</p>
+                                                <section class="chips">
+                                                    <span class="soomgopay-chip d-flex">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHJlY3QgZmlsbD0iIzUwODBGQSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiByeD0iMyIvPgogICAgICAgIDxwYXRoIGQ9Ik04LjU1MyAyLjQwMkM4LjI1NSAyLjEzNCA3Ljg2OSAyIDcuMzk2IDJjLS42MyAwLTEuMTcuMTg3LTEuNjIuNTZhMi4wMyAyLjAzIDAgMCAwLS43NTYgMS4zNzljLS4wMTUuMTcxLS4wMTIuNTY2LjIxNSAxLjA3LjExNS4yMjYuMzA0LjQ5LjU3Ljc5Mi4zOC40MzUuNjI4Ljc1Ni43NDMuOTY0LjExNS4yMDcuMTcyLjQzNy4xNzIuNjkgMCAuNDAxLS4xNDEuNzQ5LS40MjQgMS4wNDQtLjI4My4yOTUtLjYxNi40NDMtMSAuNDQzLS4zNDYgMC0uNjMzLS4xMTItLjg1OC0uMzM1YTEuMTQ0IDEuMTQ0IDAgMCAxLS4zMzgtLjg0OWMwLS4yMTYuMDY0LS40MzUuMTkzLS42NTYuMTI4LS4yMi4yODctLjM5Mi40NzktLjUxNmwtLjAwMi0uMDAyYS41NTMuNTUzIDAgMCAwIC4yNy0uNDc3YzAtLjMwNC0uMjQtLjU1LS41MzYtLjU1YS41Mi41MiAwIDAgMC0uMjUyLjA2NVY1LjYyYy0uMDkxLjA1NS0uMTgzLjEyMS0uMjc4LjE5OEMzLjMyNCA2LjM0NiAzIDcuMDA0IDMgNy43OTNjMCAuNjQ1LjIwOSAxLjE3NC42MjYgMS41ODcuNDE3LjQxMy45NTEuNjIgMS42MDQuNjIuODQyIDAgMS41MjQtLjMwNyAyLjA0NC0uOTJhMi4zMyAyLjMzIDAgMCAwIC41NzEtMS41NmMwLS42MS0uMjE1LTEuMTg5LS42NDYtMS43MzZsLS4yMjMtLjI3Ni0uMTQ0LS4xODgtLjU0OC0uNzAxYy0uMzAyLS4zOC0uMTc1LS43ODUtLjE3NS0uNzg1LjA1LS4xOTEuMTc0LS4zNjUuMzc0LS41Mi4yNDgtLjE5NC41MjMtLjI5LjgyNS0uMjlhLjguOCAwIDAgMSAuNDY0LjEyYy4xMTYuMDgxLjE3NC4xODguMTc0LjMyIDAgLjI0Ny0uMTUuNDAzLS40NS40NzFsLjAwMS4wMDFhLjUxNi41MTYgMCAwIDAtLjQwNi41MWMwIC4yODcuMjI2LjUyLjUwNS41Mi4wNCAwIC4wNzktLjAwNS4xMTYtLjAxNC4yNC0uMDQzLjQzMy0uMTEuNTc4LS4yMDUuNDczLS4zMDIuNzEtLjczNy43MS0xLjMwNCAwLS40MjYtLjE0OS0uNzczLS40NDctMS4wNDEiIGZpbGw9IiNGRkYiLz4KICAgIDwvZz4KPC9zdmc+Cg=="
+                                                        alt="숨고페이 아이콘" />
+                                                        <span>숨고페이</span>
+                                                    </span>
+                                                </section>
+                                                <section class="sub-info">
+                                                    <span>경력 5년</span>
+                                                    <span class="avg-response-time has-career">
+                                                        "평균 30분 내 응답"
+                                                    </span>
+                                                </section>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-index="4" class="slick-slide" style="outline: none; width: 196px;">
+                                    <div>
+                                        <a href="#" style="width: 100%; display: inline-block;">
+                                            <div class="main-pro-card">
+                                                <section class="header">
+                                                    <div class="thumb"
+                                                    style="background-image: url(https://dmmj3ljielax6.cloudfront.net/upload/profile/3feb8160-baf1-45d9-9c07-831e9c6c3253.jpg?h=96&w=96&webp=1);">
+                                                    </div>
+                                                    <div class="review">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=" />
+                                                        <span class="rate">5.0</span>
+                                                    </div>
+                                                </section>
+                                                <p class="name">황영준</p>
+                                                <section class="chips">
+                                                    <span class="soomgopay-chip d-flex">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHJlY3QgZmlsbD0iIzUwODBGQSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiByeD0iMyIvPgogICAgICAgIDxwYXRoIGQ9Ik04LjU1MyAyLjQwMkM4LjI1NSAyLjEzNCA3Ljg2OSAyIDcuMzk2IDJjLS42MyAwLTEuMTcuMTg3LTEuNjIuNTZhMi4wMyAyLjAzIDAgMCAwLS43NTYgMS4zNzljLS4wMTUuMTcxLS4wMTIuNTY2LjIxNSAxLjA3LjExNS4yMjYuMzA0LjQ5LjU3Ljc5Mi4zOC40MzUuNjI4Ljc1Ni43NDMuOTY0LjExNS4yMDcuMTcyLjQzNy4xNzIuNjkgMCAuNDAxLS4xNDEuNzQ5LS40MjQgMS4wNDQtLjI4My4yOTUtLjYxNi40NDMtMSAuNDQzLS4zNDYgMC0uNjMzLS4xMTItLjg1OC0uMzM1YTEuMTQ0IDEuMTQ0IDAgMCAxLS4zMzgtLjg0OWMwLS4yMTYuMDY0LS40MzUuMTkzLS42NTYuMTI4LS4yMi4yODctLjM5Mi40NzktLjUxNmwtLjAwMi0uMDAyYS41NTMuNTUzIDAgMCAwIC4yNy0uNDc3YzAtLjMwNC0uMjQtLjU1LS41MzYtLjU1YS41Mi41MiAwIDAgMC0uMjUyLjA2NVY1LjYyYy0uMDkxLjA1NS0uMTgzLjEyMS0uMjc4LjE5OEMzLjMyNCA2LjM0NiAzIDcuMDA0IDMgNy43OTNjMCAuNjQ1LjIwOSAxLjE3NC42MjYgMS41ODcuNDE3LjQxMy45NTEuNjIgMS42MDQuNjIuODQyIDAgMS41MjQtLjMwNyAyLjA0NC0uOTJhMi4zMyAyLjMzIDAgMCAwIC41NzEtMS41NmMwLS42MS0uMjE1LTEuMTg5LS42NDYtMS43MzZsLS4yMjMtLjI3Ni0uMTQ0LS4xODgtLjU0OC0uNzAxYy0uMzAyLS4zOC0uMTc1LS43ODUtLjE3NS0uNzg1LjA1LS4xOTEuMTc0LS4zNjUuMzc0LS41Mi4yNDgtLjE5NC41MjMtLjI5LjgyNS0uMjlhLjguOCAwIDAgMSAuNDY0LjEyYy4xMTYuMDgxLjE3NC4xODguMTc0LjMyIDAgLjI0Ny0uMTUuNDAzLS40NS40NzFsLjAwMS4wMDFhLjUxNi41MTYgMCAwIDAtLjQwNi41MWMwIC4yODcuMjI2LjUyLjUwNS41Mi4wNCAwIC4wNzktLjAwNS4xMTYtLjAxNC4yNC0uMDQzLjQzMy0uMTEuNTc4LS4yMDUuNDczLS4zMDIuNzEtLjczNy43MS0xLjMwNCAwLS40MjYtLjE0OS0uNzczLS40NDctMS4wNDEiIGZpbGw9IiNGRkYiLz4KICAgIDwvZz4KPC9zdmc+Cg=="
+                                                        alt="숨고페이 아이콘" />
+                                                        <span>숨고페이</span>
+                                                    </span>
+                                                </section>
+                                                <section class="sub-info">
+                                                    <span>경력 20년</span>
+                                                    <span class="avg-response-time has-career">
+                                                        "평균 15분 내 응답"
+                                                    </span>
+                                                </section>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="service-slide-next slick-arrow slide-next" style="display: block;">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxmaWx0ZXIgeD0iLTEyLjUlIiB5PSItMTAlIiB3aWR0aD0iMTI1JSIgaGVpZ2h0PSIxMjUlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj48ZmVPZmZzZXQgZHk9IjEiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxLjUiIGluPSJzaGFkb3dPZmZzZXRPdXRlcjEiIHJlc3VsdD0ic2hhZG93Qmx1ck91dGVyMSIvPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4yIDAiIGluPSJzaGFkb3dCbHVyT3V0ZXIxIi8+PC9maWx0ZXI+PGNpcmNsZSBpZD0iYiIgY3g9IjI0IiBjeT0iMjQiIHI9IjIwIi8+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHVzZSBmaWxsPSIjMDAwIiBmaWx0ZXI9InVybCgjYSkiIHhsaW5rOmhyZWY9IiNiIi8+PHVzZSBmaWxsPSIjRkZGIiB4bGluazpocmVmPSIjYiIvPjxwYXRoIGQ9Ik0xMiAxMmgyNHYyNEgxMnoiLz48cGF0aCBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMS43IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0yMiAzMWw3LTctNy03Ii8+PC9nPjwvc3ZnPg==" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- middle banner -->
+            <div class="main-app-banner container">
+                <div class="app-download-banner"></div>
+            </div>
+
+            <!-- 전국 숨은 고수 -->
+            <div class="main-pro-locations container">
+                <div class="header">
+                    <h2 class="title">전국 숨은고수</h2>
+                    <div class="desc">
+                        믿을 수 없는 전문가들
+                        <br class="d-none d-sm-block" />
+                        숨고 단 한 곳에서 찾으세요
+                    </div>
+                </div>
+                <ul class="location-list">
+                    <li class="location-item">
+                        <a herf="#">서울</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">세종</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">강원</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">인천</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">경기</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">충북</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">충남</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">경북</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">대전</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">대구</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">전북</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">경남</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">울산</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">광주</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">부산</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">전남</a>
+                    </li>
+                    <li class="location-item">
+                        <a herf="#">제주</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 전문가로 활동하시나요 -->
+            <div class="main-pro-info container">
+                <div class="header">
+                    <p class="title">
+                        전문가로 활동하시나요?
+                        <br>
+                        숨고에서 새로운 고객을
+                        <br class="d-none d-sm-block">
+                        만나보세요
+                    </p>
+                    <div class="pro-signup-btn">
+                        <a herf="#" class="btn btn-primary">고수가입</a>
+                    </div>
+                </div>
+                <div class="slick-slider slick-initialized">
+                    <button type="button" class="slick-arrow slick-prev slick-disabled" style="display: block;">Previous</button>
+                    <div class="slick-list">
+                        <div class="slick-track" style="width: 1923px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                            <div tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active slick-current" style="outline: none; width: 641px;">
+                                <div>
+                                    <div tabindex="-1" style="width: 100%; display: inline-block;">
+                                        <div class="pro-info-slide">
+                                            <img src="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-1.png?webp=1" srcset="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-1.png?webp=1 1x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-1@2x.png?webp=1 2x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-1@3x.png?webp=1 3x" alt="고객의 요청서를 무료로 받으세요" class="image">
+                                            <p class="desc">고객의 요청서를 무료로 받으세요</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div tabindex="-1" data-index="1" aria-hidden="true" class="slick-slide" style="outline: none; width: 641px;">
+                                <div ><div tabindex="-1" style="width: 100%; display: inline-block;">
+                                    <div class="pro-info-slide"><img src="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-2.png?webp=1" srcset="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-2.png?webp=1 1x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-2@2x.png?webp=1 2x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-2@3x.png?webp=1 3x" alt="조건이 맞는 고객에게 견적을 보내세요" class="image">
+                                        <p class="desc">조건이 맞는 고객에게 견적을 보내세요</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div tabindex="-1" data-index="2" aria-hidden="true" class="slick-slide" style="outline: none; width: 641px;">
+                            <div>
+                                <div tabindex="-1" style="width: 100%; display: inline-block;">
+                                    <div class="pro-info-slide"><img src="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-3.png?webp=1" srcset="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-3.png?webp=1 1x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-3@2x.png?webp=1 2x, https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-3@3x.png?webp=1 3x" alt="채팅, 전화로 빠르게 상담하고 거래하세요" class="image">
+                                        <p class="desc">채팅, 전화로 빠르게 상담하고 거래하세요</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="slick-arrow slick-next" style="display: block;">Next</button>
+                <ul class="slick-dots" style="display: block;">
+                    <li class="slick-active">
+                        <button>1</button>
+                    </li>
+                    <li class="">
+                        <button>2</button>
+                    </li>
+                    <li class="">
+                        <button>3</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav class="footer-container" id="app-footer">
+            <div class="footer-container-row container">
+                <div class="col-content margin-bottom">
+                    <p class="text contact">1599-5319</p>
+                    <p class="text-middle">
+                        평일 10:00 - 18:00
+                        <br />
+                        (점심시간 13:00 - 14:00 제외 · 주말/공휴일 제외)
+                    </p>
+                    <a href="#" class="download">
+                        <img src="https://assets.cdn.soomgo.com/icons/icon-download-appstore.svg" alt="앱스토어" />
+                        APP STORE
+                    </a>
+                    <a href="#" class="download">
+                        <img src="https://assets.cdn.soomgo.com/icons/icon-download-palystore.svg" alt="구글플레이" />
+                        PLAY STORE
+                    </a>
+                </div>
+                <div class="col-content right">
+                    <ul class="content-list">
+                        <li class="open-padding">
+                            <span class="text-middle title category">
+                                숨고소개
+                                <span class="new-badge" style="display: none;">N</span>
+                            </span>
+                            <div>
+                                <a href="#" class="text-middle category">
+                                    회사소개
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    채용안내
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    팀블로그
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="open-padding">
+                            <span class="text-middle title category">
+                                고객안내
+                                <span class="new-badge" style="display: none;">N</span>
+                            </span>
+                            <div>
+                                <a href="#" class="text-middle category">
+                                    이용안내
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    안전정책
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    예상금액
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    고수찾기
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    숨고보증
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    고수에게묻다
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category sr-only">
+                                    커뮤니티
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="open-padding">
+                            <span class="text-middle title category">
+                                고수안내
+                                <span class="new-badge" style="display: none;">N</span>
+                            </span>
+                            <div>
+                                <a href="#" class="text-middle category">
+                                    이용안내
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    고수가이드
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    고수가입
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    고수센터
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="open-padding">
+                            <span class="text-middle title category">
+                                고객센터
+                                <span class="new-badge" style="display: none;">N</span>
+                            </span>
+                            <div>
+                                <a href="#" class="text-middle category">
+                                    공지사항
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                                <a href="#" class="text-middle category">
+                                    자주묻는질문
+                                    <span class="new-badge" style="display: none;">N</span>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-container-row container terms">
+                <div class="term-container">
+                    <div class="col-content term-content">
+                        <div class="col-content-list-term">
+                            <div class="terms-group">
+                                <a href="#" class="text term">이용약관</a>
+                                <a href="#" class="text term">개인정보처리방침</a>
+                            </div>
+                            <div class="terms-group">
+                                <a href="#" class="text term">위치기반 서비스 이용약관</a>
+                                <a href="#" class="text term">사업자 정보확인</a>
+                            </div>
+                        </div>
+                        <div class="col-content-list-term">
+                            <span class="text term-text">
+                                (주)브레이브모바일은 통신판매중개자로서 통신판매의 당사자가 아니며 개별 판매자가 
+                                제공하는 서비스에 대한 이행, 계약사항 등과 관련한 의무와 책임은 거래당사자에게 있습니다. 
+                            </span>
+                        </div>
+                        <ul class="col-content-guide">
+                            <li class="text">
+                                상호명:(주)브레이브모바일 · 대표이사:KIM ROBIN H · 개인정보책임관리자:김태우 · 주소:서울특별시 강남구 테헤란로 415, L7 강남타워 5층 
+                            </li>
+                            <li class="text">
+                                사업자등록번호:120-88-22325 · 통신판매업신고증:제 2021-서울강남-00551 호 · 직업정보제공사업 신고번호:서울청 제 2019-21호 
+                            </li>
+                            <li class="text">
+                                고객센터:1599-5319 . 이메일:support@soomgo.com
+                            </li>
+                            <li class="text">
+                                Copyright @Brave Mobile Inc. All Rights Reserved.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-content badge-list right">
+                        <a href="https://www.facebook.com/SoomgoKorea/" class="footer-badge">
+                            <img  src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-facebook.svg" alt="숨고 페이스북 계정">
+                        </a>
+                        <a href="https://www.facebook.com/SoomgoKorea/" class="footer-badge">
+                            <img  src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-instagram.svg" alt="숨고 인스타그램">
+                        </a>
+                        <a href="https://blog.naver.com/brave_mobile_mkt/" class="footer-badge">
+                            <img src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-naverblog.svg" alt="숨고 블로그">
+                        </a>
+                        <a href="https://post.naver.com/brave_mobile_mkt?isHome=1" class="footer-badge">
+                            <img src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-naverpost.svg" alt="숨고 포스트">
+                        </a>
+                        <a href="https://news.soomgo.com" target="_blank" class="footer-badge">
+                            <img src="https://assets.cdn.soomgo.com/icons/icon-footer-sns-tistory.svg" alt="숨고 스토리">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
 </body>
 </html>
